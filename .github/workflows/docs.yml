@@ -1,0 +1,10 @@
+name: Docs 📄
+
+on: pull_request
+
+jobs:
+  docs:
+    uses: kolvin/github-actions/.github/workflows/terraform-docs.yaml@2efd1bbad45383cb8a716a92348a20fea7e72c25
+    secrets:
+      BOT_GPG_PRIVATE_KEY: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
+      BOT_GPG_PASSPHRASE: ${{ secrets.BOT_GPG_PASSPHRASE }}
